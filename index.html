@@ -10,6 +10,14 @@
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Estilos para telas menores */
+        @media (max-width: 640px) { /* sm breakpoint em Tailwind é 640px */
+            .info-pessoal {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-black text-white p-6 rounded-lg shadow-lg">
@@ -17,7 +25,7 @@
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Luan Carlos Nunes de Oliveira</h1>
             <p class="text-gray-400 text-lg mt-2">Analista de Dados</p>
-            <div class="flex justify-center items-center gap-4 mt-4">
+            <div class="flex justify-center items-center gap-4 mt-4 info-pessoal">
                 <span class="text-gray-300">
                     <a href="https://wa.me/5583996280032" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition duration-300">
                         Telefone: (83) 99628-0032
@@ -186,7 +194,7 @@
                         <h4 class="text-lg font-semibold text-purple-300 mb-1">Informática Básica</h4>
                         <p class="text-gray-200">Microlins</p>
                     </article>
-                     <article class="bg-black/20 p-4 rounded-lg border border-white/10 shadow-md transition duration-300 hover:shadow-lg hover:scale-[1.01]">
+                    <article class="bg-black/20 p-4 rounded-lg border border-white/10 shadow-md transition duration-300 hover:shadow-lg hover:scale-[1.01]">
                         <h4 class="text-lg font-semibold text-purple-300 mb-1">Excel Avançado</h4>
                         <p class="text-gray-200">Microlins</p>
                     </article>
