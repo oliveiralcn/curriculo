@@ -3,272 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo</title>
+    <meta name="description" content="Currículo de Luan Carlos Nunes de Oliveira - Analista de Dados com experiência em Python, JavaScript e SQL">
+    <meta name="keywords" content="analista de dados, python, javascript, sql, data analysis, currículo">
+    <meta name="author" content="Luan Carlos Nunes de Oliveira">
+    <meta name="theme-color" content="#0a192f">
+    
+    <title>Luan Carlos Nunes de Oliveira | Analista de Dados</title>
+    
+    <!-- Favicon -->
     <link rel="shortcut icon" href="icone.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icone.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Estilos para telas menores */
-        @media (max-width: 640px) { /* sm breakpoint em Tailwind é 640px */
-            .info-pessoal {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.5rem;
-            }
-            .section-content {
-                padding-left: 1rem;
-            }
-        }
-        /* Cores personalizadas */
-        .bg-gradient-custom {
-            background: linear-gradient(to bottom, #050513, #15233a); /* Cores do Tailwind: gray-900, gray-800 */
-        }
-        .text-blue-custom {
-            color: #4a91e7; /* Tailwind: blue-300 */
-        }
-        .text-purple-custom {
-            color: #984ddf; /* Tailwind: purple-400 */
-        }
-        .border-white-custom {
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-        .shadow-custom {
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.1); /* Tailwind shadow-xl */
-        }
-        .hover-shadow-custom:hover {
-             box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.4), 0 9px 12px -7px rgba(0, 0, 0, 0.15);
-        }
-        .pulse {
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-          }
-          50% {
-            opacity: .4;
-          }
-        }
-        .info-pessoal {
-            display: flex;
-            justify-content: center; /* Centraliza os itens horizontalmente */
-            align-items: center;     /* Alinha os itens verticalmente */
-            flex-wrap: nowrap;       /* Impede que os itens quebrem para a próxima linha */
-            gap: 2rem;              /* Espaço entre os itens */
-        }
-    </style>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-custom text-white p-6 rounded-lg shadow-lg bg-opacity-50 backdrop-blur-md">
-    <div class="container max-w-7xl mx-auto bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white-custom shadow-custom">
-        <header class="text-center mb-8">
-            <div class="flex justify-center mb-4">
-                <div class="w-32 h-32 rounded-full border-4 border-purple-400">
-                    <img src="Foto.jpg" alt="Foto de Luan Carlos Nunes de Oliveira" class="w-full h-full rounded-full object-cover">
+<body>
+    <!-- Skip to main content (accessibility) -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+
+    <div class="container">
+        <div class="main-container">
+            <!-- Header Section -->
+            <header class="header">
+                <div class="profile-image-container">
+                    <div class="profile-image">
+                        <img src="Foto.jpg" alt="Foto de Luan Carlos Nunes de Oliveira" loading="lazy">
+                    </div>
                 </div>
-            </div>
-            <h1 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 pulse">Luan Carlos Nunes de Oliveira</h1>
-            <p class="text-gray-400 text-lg mt-2">Analista de Dados</p>
-            <div class="info-pessoal">
-                <span class="text-gray-300">
-                    <a href="https://wa.me/5583996280032" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition duration-300">
-                        <span class="font-semibold text-green-400">Telefone:</span> <span class="text-white">(83) 99628-0032</span>
+                <h1 class="main-title">Luan Carlos Nunes de Oliveira</h1>
+                <p class="subtitle">Analista de Dados</p>
+                <nav class="contact-info" aria-label="Informações de contato">
+                    <a href="https://wa.me/5583996280032" 
+                       class="contact-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-type="whatsapp"
+                       aria-label="WhatsApp">
+                        <span class="label">Telefone:</span>
+                        <span class="value">(83) 99628-0032</span>
                     </a>
-                </span>
-                <a href="mailto:luancarlosn.oliveira@gmail.com" class="text-blue-400 hover:text-blue-300 transition duration-300">
-                    <span class="font-semibold text-blue-400">E-mail:</span> <span class="text-white">luancarlosn.oliveira@gmail.com</span>
-                </a>
-                <a href="https://github.com/oliveiralcn" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:text-purple-300 transition duration-300">
-                    <span class="font-semibold text-purple-400">GitHub:</span> <span class="text-white">@oliveiralcn</span>
-                </a>
-                <a href="https://www.linkedin.com/in/luan-oliveira-049944357" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 transition duration-300">
-                    LinkedIn
-                </a>
-            </div>
-        </header>
+                    <a href="mailto:luancarlosn.oliveira@gmail.com" 
+                       class="contact-link"
+                       data-type="email"
+                       aria-label="Email">
+                        <span class="label">E-mail:</span>
+                        <span class="value">luancarlosn.oliveira@gmail.com</span>
+                    </a>
+                    <a href="https://github.com/oliveiralcn" 
+                       class="contact-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-type="github"
+                       aria-label="GitHub">
+                        <span class="label">GitHub:</span>
+                        <span class="value">@oliveiralcn</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/luan-oliveira-049944357" 
+                       class="contact-link" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       data-type="linkedin"
+                       aria-label="LinkedIn">
+                        LinkedIn
+                    </a>
+                </nav>
+            </header>
 
-        <main class="space-y-8">
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Objetivo</h2>
-                <p class="text-gray-200 leading-relaxed section-content">
-                    Analista de Dados.
-                </p>
-            </section>
+            <!-- Main Content -->
+            <main id="main-content" class="content" tabindex="-1">
+                <!-- Objetivo Section -->
+                <section class="section" aria-labelledby="objetivo">
+                    <h2 id="objetivo" class="section-title">Objetivo</h2>
+                    <p class="section-content">Analista de Dados</p>
+                </section>
 
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Habilidades</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 section-content">
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Linguagens de Programação</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200"><span class="font-semibold">Python:</span> (Pandas, NumPy)</li>
-                            <li class="text-gray-200"><span class="font-semibold">JavaScript:</span> </li>
-                            <li class="text-gray-200"><span class="font-semibold">SQL:</span> </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Ferramentas No-Code</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200"><span class="font-semibold">Notion:</span> </li>
-                            <li class="text-gray-200"><span class="font-semibold">Google Workspace:</span> (Sheets, Docs, Forms)</li>
-                            <li class="text-gray-200"><span class="font-semibold">Microsoft 365:</span> (Excel, Power Point, Word, Forms, Publisher)</li>
-                             <li class="text-gray-200"><span class="font-semibold">Power Query:</span></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Análise de Dados</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200">Tratamento e interpretação de grandes volumes de dados</li>
-                            <li class="text-gray-200">Modelagem de dados</li>
-                            <li class="text-gray-200">Análise exploratória de dados (EDA)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Automação de Processos</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200">Desenvolvimento de soluções para aumentar a eficiência (automação de tarefas de coleta e tratamento de dados usando Python)</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Gestão de Projetos</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200">Desenvolvimento e implementação de soluções para problemas de logística</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-semibold text-purple-custom mb-2">Atendimento ao Cliente & Comunicação</h3>
-                        <ul class="list-disc list-inside space-y-1 ml-4">
-                            <li class="text-gray-200">Gestão de pessoas, comunicação eficaz, pensamento rápido</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+                <!-- Habilidades Section -->
+                <section class="section" aria-labelledby="habilidades">
+                    <h2 id="habilidades" class="section-title">Habilidades</h2>
+                    <div class="skills-grid">
+                        <!-- Programming Languages -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Linguagens de Programação</h3>
+                            <ul class="skill-list">
+                                <li><span class="skill-highlight">Python:</span> (Pandas, NumPy)</li>
+                                <li><span class="skill-highlight">JavaScript</span></li>
+                                <li><span class="skill-highlight">SQL</span></li>
+                            </ul>
+                        </div>
 
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Experiência Profissional</h2>
-                <div class="space-y-6 section-content">
-                    <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h3 class="text-xl font-semibold text-purple-custom mb-2">Analista de Dados | Secretaria Municipal de Educação | JANEIRO 2022 - ATUALMENTE</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                            <li>Reduzi em 80% o tempo necessário para obtenção dos resultados finais, fechamento e reabertura das plataformas governamentais, assim como uma diminuição considerável na perda do prazo para cadastramento dos programas.</li>
-                            <li>Desenvolvimento de soluções para problemas de logística.</li>
-                            <li>Criação de automações para aumentar a eficiência da equipe.</li>
-                            <li>Tratamento de grande volume de dados para obtenção de resultados precisos.</li>
-                        </ul>
-                    </article>
-                    <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h3 class="text-xl font-semibold text-purple-custom mb-2">Instrutor de Musculação | RM Arena Fitness - Desterro | SETEMBRO 2021 - NOVEMBRO 2023</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                            <li>Trabalho em equipe.</li>
-                            <li>Capacidade de gestão de pessoas.</li>
-                            <li>Pensamento rápido.</li>
-                            <li>Criação de automação para envio dos treinos de forma rápida e eficaz.</li>
-                        </ul>
-                    </article>
-                    <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h3 class="text-xl font-semibold text-purple-custom mb-2">Técnico em Montagem e Manutenção de Computadores e Redes | E E E F M Gertrudes Leite | JULHO 2012 - JUNHO 2014</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                            <li>Trabalho em equipe.</li>
-                            <li>Gestão de recursos.</li>
-                            <li>Manutenção de computadores.</li>
-                            <li>Gestão de rede de computadores.</li>
-                            <li>Manutenção de rede de computadores.</li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
+                        <!-- No-Code Tools -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Ferramentas No-Code</h3>
+                            <ul class="skill-list">
+                                <li><span class="skill-highlight">Notion</span></li>
+                                <li><span class="skill-highlight">Google Workspace:</span> (Sheets, Docs, Forms)</li>
+                                <li><span class="skill-highlight">Microsoft 365:</span> (Excel, Power Point, Word, Forms, Publisher)</li>
+                                <li><span class="skill-highlight">Power Query</span></li>
+                            </ul>
+                        </div>
 
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Formação Acadêmica</h2>
-                <div class="space-y-6 section-content">
-                     <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h3 class="text-xl font-semibold text-purple-custom mb-2">Área de Tecnologia</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                            <li><b>Desenvolvimento de Sistemas</b> | UNICORP | Cursando</li>
-                        </ul>
-                    </article>
-                    <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h3 class="text-xl font-semibold text-purple-custom mb-2">Área de Educação Física</h3>
-                        <ul class="list-disc list-inside space-y-2 text-gray-200 ml-4">
-                            <li><b>Pós-graduação em Prescrição de Atividade Físicas em Situações Especiais de Saúde e Lesões</b> | Unyleya</li>
-                            <li><b>Bacharel em Educação Física</b> | Centro Universitário de João Pessoa-UNIPÊ | 25 de Janeiro de 2018</li>
-                        </ul>
-                    </article>
-                </div>
-            </section>
+                        <!-- Data Analysis -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Análise de Dados</h3>
+                            <ul class="skill-list">
+                                <li>Tratamento e interpretação de grandes volumes de dados</li>
+                                <li>Modelagem de dados</li>
+                                <li>Análise exploratória de dados (EDA)</li>
+                            </ul>
+                        </div>
 
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Cursos e Certificações</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 section-content">
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Aulão de análise de dados</h4>
-                        <p class="text-gray-200 ml-4">Hashtag Treinamentos</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Aulão de ciência de dados</h4>
-                        <p class="text-gray-200 ml-4">Hashtag Treinamentos</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Fundamentos do ChatGPT</h4>
-                        <p class="text-gray-200 ml-4">Santander Open Academy</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Curso Livre de Síndrome Gripal e COVID-19</h4>
-                        <p class="text-gray-200 ml-4">Instituto Sírio-Libanês de Ensino e Pesquisa</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Fisiologia, Avaliação e Prescrição do Exercício para Artrose, Artrite e Osteoporose</h4>
-                        <p class="text-gray-200 ml-4"></p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Alimentação, Nutrição e Exercício Físico</h4>
-                        <p class="text-gray-200 ml-4">Encontro Nacional de Atividade Física, Esporte e Saúde - ENAFES</p>
-                    </article>
-                     <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">A Fascinante Construção do Eu</h4>
-                        <p class="text-gray-200 ml-4">Palestra com Augusto Cury</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Montagem e Manutenção de Computadores e Redes</h4>
-                        <p class="text-gray-200 ml-4">Microlins</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Redes Avançadas</h4>
-                        <p class="text-gray-200 ml-4">Microlins</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Segurança em Redes</h4>
-                        <p class="text-gray-200 ml-4">Microlins</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Informática Básica</h4>
-                        <p class="text-gray-200 ml-4">Microlins</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Excel Avançado</h4>
-                        <p class="text-gray-200 ml-4">Microlins</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Introdução à ciência de dados</h4>
-                        <p class="text-gray-200 ml-4">Santander Open Academy</p>
-                    </article>
-                    <article class="bg-black/20 p-4 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom">
-                        <h4 class="text-lg font-semibold text-purple-custom mb-1">Excel</h4>
-                        <p class="text-gray-200 ml-4">Santander Open Academy</p>
-                    </article>
-                </div>
-            </section>
+                        <!-- Process Automation -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Automação de Processos</h3>
+                            <ul class="skill-list">
+                                <li>Desenvolvimento de soluções para aumentar a eficiência (automação de tarefas de coleta e tratamento de dados usando Python)</li>
+                            </ul>
+                        </div>
 
-            <section>
-                <h2 class="text-2xl font-semibold text-blue-custom mb-4 border-b border-white-custom pb-2">Apresentação de Trabalho</h2>
-                <article class="bg-black/20 p-6 rounded-lg border border-white-custom shadow-md transition duration-300 hover:shadow-lg hover-shadow-custom section-content">
-                    <h3 class="text-xl font-semibold text-purple-custom mb-2">Efeito de uma Sessão de Treinamento Multifuncional na Hipotensão Pós Exercício de Idosos</h3>
-                    <p class="text-gray-200 ml-4">XXV Congresso da Sociedade Brasileira de Hipertensão</p>
-                </article>
-            </section>
-        </main>
+                        <!-- Project Management -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Gestão de Projetos</h3>
+                            <ul class="skill-list">
+                                <li>Desenvolvimento e implementação de soluções para problemas de logística</li>
+                            </ul>
+                        </div>
+
+                        <!-- Customer Service & Communication -->
+                        <div class="skill-card" tabindex="0">
+                            <h3 class="skill-card-title">Atendimento ao Cliente & Comunicação</h3>
+                            <ul class="skill-list">
+                                <li>Gestão de pessoas, comunicação eficaz, pensamento rápido</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Professional Experience Section -->
+                <section class="section" aria-labelledby="experiencia">
+                    <h2 id="experiencia" class="section-title">Experiência Profissional</h2>
+                    <div class="timeline">
+                        <!-- Current Job -->
+                        <article class="timeline-item" tabindex="0">
+                            <h3 class="timeline-title">Analista de Dados | Secretaria Municipal de Educação | JANEIRO 2022 - ATUALMENTE</h3>
+                            <ul class="timeline-content">
+                                <li>Reduzi em 80% o tempo necessário para obtenção dos resultados finais, fechamento e reabertura das plataformas governamentais, assim como uma diminuição considerável na perda do prazo para cadastramento dos programas.</li>
+                                <li>Desenvolvimento de soluções para problemas de logística.</li>
+                                <li>Criação de automações para aumentar a eficiência da equipe.</li>
+                                <li>Tratamento de grande volume de dados para obtenção de resultados precisos.</li>
+                            </ul>
+                        </article>
+
+                        <!-- Previous Jobs -->
+                        <article class="timeline-item" tabindex="0">
+                            <h3 class="timeline-title">Instrutor de Musculação | RM Arena Fitness - Desterro | SETEMBRO 2021 - NOVEMBRO 2023</h3>
+                            <ul class="timeline-content">
+                                <li>Trabalho em equipe.</li>
+                                <li>Capacidade de gestão de pessoas.</li>
+                                <li>Pensamento rápido.</li>
+                                <li>Criação de automação para envio dos treinos de forma rápida e eficaz.</li>
+                            </ul>
+                        </article>
+
+                        <article class="timeline-item" tabindex="0">
+                            <h3 class="timeline-title">Técnico em Montagem e Manutenção de Computadores e Redes | E E E F M Gertrudes Leite | JULHO 2012 - JUNHO 2014</h3>
+                            <ul class="timeline-content">
+                                <li>Trabalho em equipe.</li>
+                                <li>Gestão de recursos.</li>
+                                <li>Manutenção de computadores.</li>
+                                <li>Gestão de rede de computadores.</li>
+                                <li>Manutenção de rede de computadores.</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section class="section" aria-labelledby="formacao">
+                    <h2 id="formacao" class="section-title">Formação Acadêmica</h2>
+                    <div class="timeline">
+                        <!-- Technology Education -->
+                        <article class="timeline-item" tabindex="0">
+                            <h3 class="timeline-title">Área de Tecnologia</h3>
+                            <ul class="timeline-content">
+                                <li><strong>Desenvolvimento de Sistemas</strong> | UNICORP | Cursando</li>
+                            </ul>
+                        </article>
+
+                        <!-- Physical Education -->
+                        <article class="timeline-item" tabindex="0">
+                            <h3 class="timeline-title">Área de Educação Física</h3>
+                            <ul class="timeline-content">
+                                <li><strong>Pós-graduação em Prescrição de Atividade Físicas em Situações Especiais de Saúde e Lesões</strong> | Unyleya</li>
+                                <li><strong>Bacharel em Educação Física</strong> | Centro Universitário de João Pessoa-UNIPÊ | 25 de Janeiro de 2018</li>
+                            </ul>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Certifications Section -->
+                <section class="section" aria-labelledby="certificacoes">
+                    <h2 id="certificacoes" class="section-title">Cursos e Certificações</h2>
+                    <div class="certifications-grid">
+                        <!-- Data Analysis -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Aulão de análise de dados</h4>
+                            <p class="certification-institution">Hashtag Treinamentos</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Aulão de ciência de dados</h4>
+                            <p class="certification-institution">Hashtag Treinamentos</p>
+                        </article>
+
+                        <!-- AI & Technology -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Fundamentos do ChatGPT</h4>
+                            <p class="certification-institution">Santander Open Academy</p>
+                        </article>
+
+                        <!-- Healthcare -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Curso Livre de Síndrome Gripal e COVID-19</h4>
+                            <p class="certification-institution">Instituto Sírio-Libanês de Ensino e Pesquisa</p>
+                        </article>
+
+                        <!-- Physical Education -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Fisiologia, Avaliação e Prescrição do Exercício para Artrose, Artrite e Osteoporose</h4>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Alimentação, Nutrição e Exercício Físico</h4>
+                            <p class="certification-institution">Encontro Nacional de Atividade Física, Esporte e Saúde - ENAFES</p>
+                        </article>
+
+                        <!-- Personal Development -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">A Fascinante Construção do Eu</h4>
+                            <p class="certification-institution">Palestra com Augusto Cury</p>
+                        </article>
+
+                        <!-- Technical Certifications -->
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Montagem e Manutenção de Computadores e Redes</h4>
+                            <p class="certification-institution">Microlins</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Redes Avançadas</h4>
+                            <p class="certification-institution">Microlins</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Segurança em Redes</h4>
+                            <p class="certification-institution">Microlins</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Informática Básica</h4>
+                            <p class="certification-institution">Microlins</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Excel Avançado</h4>
+                            <p class="certification-institution">Microlins</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Introdução à ciência de dados</h4>
+                            <p class="certification-institution">Santander Open Academy</p>
+                        </article>
+
+                        <article class="certification-card" tabindex="0">
+                            <h4 class="certification-title">Excel</h4>
+                            <p class="certification-institution">Santander Open Academy</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+        </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
 </body>
 </html>
