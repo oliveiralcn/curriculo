@@ -13,11 +13,9 @@ const CONFIG = {
 
 // ===== DOM ELEMENTS =====
 const elements = {
-  sections: null,
-  skillCards: null,
-  timelineItems: null,
-  certificationCards: null,
-  contactLinks: null
+  animatable: null,
+  contactLinks: null,
+  cards: null
 };
 
 // ===== UTILITY FUNCTIONS =====
@@ -40,21 +38,6 @@ function debounce(func, wait) {
 }
 
 /**
- * Check if element is in viewport
- * @param {Element} element - DOM element to check
- * @returns {boolean} True if element is in viewport
- */
-function isInViewport(element) {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-/**
  * Check if element is partially visible
  * @param {Element} element - DOM element to check
  * @param {number} threshold - Visibility threshold (0-1)
@@ -74,9 +57,7 @@ function isPartiallyVisible(element, threshold = CONFIG.fadeInThreshold) {
  * Add fade-in animation to elements when they become visible
  */
 function handleScrollAnimations() {
-  const animatableElements = document.querySelectorAll('.section, .skill-card, .timeline-item, .certification-card');
-  
-  animatableElements.forEach((element, index) => {
+  elements.animatable.forEach((element, index) => {
     if (isPartiallyVisible(element) && !element.classList.contains('fade-in-up')) {
       setTimeout(() => {
         element.classList.add('fade-in-up');
@@ -85,44 +66,15 @@ function handleScrollAnimations() {
   });
 }
 
-/**
- * Smooth scroll to section
- * @param {string} targetId - ID of target element
- */
-function smoothScrollTo(targetId) {
-  const target = document.getElementById(targetId);
-  if (target) {
-    const targetPosition = target.offsetTop - CONFIG.scrollOffset;
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
-}
-
 // ===== INTERACTION HANDLERS =====
 /**
  * Handle contact link interactions
  */
 function setupContactLinks() {
-  elements.contactLinks = document.querySelectorAll('.contact-link');
-  
   elements.contactLinks.forEach(link => {
-    // Add click tracking for analytics (if needed)
     link.addEventListener('click', (e) => {
       const linkType = link.getAttribute('data-type') || 'unknown';
       console.log(`Contact link clicked: ${linkType}`);
-      
-      // Add any analytics tracking here
-      // Example: gtag('event', 'contact_click', { link_type: linkType });
-    });
-    
-    // Add keyboard navigation support
-    link.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        link.click();
-      }
     });
   });
 }
@@ -131,13 +83,9 @@ function setupContactLinks() {
  * Setup card hover effects and interactions
  */
 function setupCardInteractions() {
-  const cards = document.querySelectorAll('.skill-card, .timeline-item, .certification-card');
-  
-  cards.forEach(card => {
-    // Add focus support for keyboard navigation
+  elements.cards.forEach(card => {
     card.setAttribute('tabindex', '0');
     
-    // Enhanced hover effects
     card.addEventListener('mouseenter', () => {
       card.style.transform = 'translateY(-4px) scale(1.02)';
     });
@@ -145,56 +93,16 @@ function setupCardInteractions() {
     card.addEventListener('mouseleave', () => {
       card.style.transform = 'translateY(0) scale(1)';
     });
-    
-    // Keyboard navigation support
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        card.click();
-      }
-    });
-  });
-}
 
-/**
- * Setup skill progress animations (if needed for future enhancements)
- */
-function setupSkillAnimations() {
-  const skillItems = document.querySelectorAll('.skill-list li');
-  
-  skillItems.forEach((item, index) => {
-    item.style.animationDelay = `${index * 0.1}s`;
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            card.click();
+        }
+    });
   });
 }
 
 // ===== PERFORMANCE OPTIMIZATIONS =====
-/**
- * Lazy load images when they come into viewport
- */
-function setupLazyLoading() {
-  const images = document.querySelectorAll('img[data-src]');
-  
-  if ('IntersectionObserver' in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
-        }
-      });
-    });
-    
-    images.forEach(img => imageObserver.observe(img));
-  } else {
-    // Fallback for browsers without IntersectionObserver
-    images.forEach(img => {
-      img.src = img.dataset.src;
-      img.classList.remove('lazy');
-    });
-  }
-}
-
 /**
  * Optimize scroll performance with requestAnimationFrame
  */
@@ -208,8 +116,7 @@ const optimizedScrollHandler = debounce(() => {
  */
 function setupKeyboardNavigation() {
   document.addEventListener('keydown', (e) => {
-    // Skip to main content with 'S' key
-    if (e.key === 's' || e.key === 'S') {
+    if (e.key.toLowerCase() === 's') {
       const mainContent = document.querySelector('main');
       if (mainContent) {
         mainContent.focus();
@@ -223,15 +130,14 @@ function setupKeyboardNavigation() {
  * Setup focus management
  */
 function setupFocusManagement() {
-  // Ensure focus is visible for keyboard users
-  document.addEventListener('keydown', (e) => {
+  document.body.addEventListener('mousedown', () => {
+    document.body.classList.remove('keyboard-navigation');
+  });
+
+  document.body.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       document.body.classList.add('keyboard-navigation');
     }
-  });
-  
-  document.addEventListener('mousedown', () => {
-    document.body.classList.remove('keyboard-navigation');
   });
 }
 
@@ -260,12 +166,10 @@ function setupReducedMotion() {
 function setupErrorHandling() {
   window.addEventListener('error', (e) => {
     console.error('JavaScript error:', e.error);
-    // Could send to analytics or error reporting service
   });
   
   window.addEventListener('unhandledrejection', (e) => {
     console.error('Unhandled promise rejection:', e.reason);
-    // Could send to analytics or error reporting service
   });
 }
 
@@ -276,16 +180,13 @@ function setupErrorHandling() {
 function init() {
   try {
     // Cache DOM elements
-    elements.sections = document.querySelectorAll('.section');
-    elements.skillCards = document.querySelectorAll('.skill-card');
-    elements.timelineItems = document.querySelectorAll('.timeline-item');
-    elements.certificationCards = document.querySelectorAll('.certification-card');
+    elements.animatable = document.querySelectorAll('.section, .skill-card, .timeline-item, .certification-card');
+    elements.contactLinks = document.querySelectorAll('.contact-link');
+    elements.cards = document.querySelectorAll('.skill-card, .timeline-item, .certification-card');
     
     // Setup functionality
     setupContactLinks();
     setupCardInteractions();
-    setupSkillAnimations();
-    setupLazyLoading();
     setupKeyboardNavigation();
     setupFocusManagement();
     setupReducedMotion();
@@ -320,14 +221,3 @@ document.addEventListener('visibilitychange', () => {
     handleScrollAnimations();
   }
 });
-
-// ===== EXPORT FOR TESTING (if needed) =====
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    init,
-    debounce,
-    isInViewport,
-    isPartiallyVisible,
-    smoothScrollTo
-  };
-}

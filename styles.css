@@ -1,19 +1,18 @@
 /* ===== CSS CUSTOM PROPERTIES (VARIABLES) ===== */
 :root {
   /* Color Palette - Enhanced Attractive Scheme */
-  --color-primary: #0f172a;
-  --color-secondary: #1e293b;
-  --color-tertiary: #334155;
-  --color-accent: #00d4aa;
-  --color-accent-secondary: #06b6d4;
-  --color-accent-tertiary: #3b82f6;
-  --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-  --color-highlight: #fbbf24;
-  --color-success: #10b981;
-  --color-gradient-start: #0f172a;
-  --color-gradient-end: #1e293b;
+  --color-primary: #0a0a0a;
+  --color-secondary: #1a1a1a;
+  --color-tertiary: #2a2a2a;
+  --color-accent: #2196f3;
+  --color-accent-secondary: #03dac6;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-text-muted: #6e6e6e;
+  --color-highlight: #fdd835;
+  --color-success: #4caf50;
+  --color-gradient-start: #0a0a0a;
+  --color-gradient-end: #1a1a1a;
   
   /* Spacing */
   --spacing-xs: 0.25rem;
@@ -141,10 +140,12 @@ body {
 /* ===== LAYOUT COMPONENTS ===== */
 .main-container {
   background: rgba(13, 35, 65, 0.8);
+  background-color: var(--color-secondary);
   backdrop-filter: blur(16px);
   border-radius: var(--radius-xl);
   border: 1px solid rgba(100, 255, 218, 0.2);
   box-shadow: var(--shadow-custom);
+  padding: var(--spacing-xl);
 }
 
 .section {
@@ -278,6 +279,7 @@ body {
 .skill-list {
   list-style: none;
   padding: 0;
+  padding-left: 1.5rem;
 }
 
 .skill-list li {
@@ -332,6 +334,7 @@ body {
   list-style: none;
   padding: 0;
   margin-left: var(--spacing-lg);
+  padding-left: 1.5rem;
 }
 
 .timeline-content li {
@@ -361,6 +364,7 @@ body {
   border: 1px solid rgba(100, 255, 218, 0.2);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
+  padding-left: 1.5rem;
   box-shadow: var(--shadow-custom);
   transition: all var(--transition-normal);
 }
@@ -464,6 +468,7 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
