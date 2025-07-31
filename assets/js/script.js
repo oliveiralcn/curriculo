@@ -18,54 +18,6 @@ const elements = {
   cards: null
 };
 
-// ===== FUNÇÕES UTILITÁRIAS =====
-/**
- * Função Debounce para limitar a taxa de execução de uma função
- * @param {Function} func - Função para aplicar o debounce
- * @param {number} wait - Tempo de espera em milissegundos
- * @returns {Function} Função com debounce
- */
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-/**
- * Verifica se o elemento está parcialmente visível
- * @param {Element} element - Elemento DOM para verificar
- * @param {number} threshold - Limiar de visibilidade (0-1)
- * @returns {boolean} Verdadeiro se o elemento estiver parcialmente visível
- */
-function isPartiallyVisible(element, threshold = CONFIG.fadeInThreshold) {
-  const rect = element.getBoundingClientRect();
-  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-  const elementHeight = rect.height;
-  const visibleHeight = Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0);
-  
-  return visibleHeight / elementHeight >= threshold;
-}
-
-// ===== FUNÇÕES DE ANIMAÇÃO =====
-/**
- * Adiciona animação de fade-in aos elementos quando se tornam visíveis
- */
-function handleScrollAnimations() {
-  elements.animatable.forEach((element, index) => {
-    if (isPartiallyVisible(element) && !element.classList.contains('fade-in-up')) {
-      setTimeout(() => {
-        element.classList.add('fade-in-up');
-      }, index * CONFIG.animationDelay);
-    }
-  });
-}
-
 // ===== MANIPULADORES DE INTERAÇÃO =====
 /**
  * Manipula as interações dos links de contato
@@ -101,14 +53,6 @@ function setupCardInteractions() {
     });
   });
 }
-
-// ===== OTIMIZAÇÕES DE PERFORMANCE =====
-/**
- * Otimiza a performance do scroll com requestAnimationFrame
- */
-const optimizedScrollHandler = debounce(() => {
-  requestAnimationFrame(handleScrollAnimations);
-}, 16); // ~60fps
 
 // ===== MELHORIAS DE ACESSIBILIDADE =====
 /**
@@ -192,11 +136,6 @@ function init() {
     setupReducedMotion();
     setupErrorHandling();
     
-    // Configura as animações de scroll
-    handleScrollAnimations(); // Verificação inicial
-    window.addEventListener('scroll', optimizedScrollHandler);
-    window.addEventListener('resize', debounce(handleScrollAnimations, 250));
-    
     // Adiciona a classe 'loaded' ao body para transições CSS
     document.body.classList.add('loaded');
     
@@ -213,11 +152,3 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
-
-// Manipula mudanças na visibilidade da página
-document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
-    // Reativa as animações quando a página se torna visível
-    handleScrollAnimations();
-  }
-});
