@@ -196,11 +196,12 @@ body {
   border: 2px solid var(--color-accent);
   box-shadow: var(--shadow-lg);
   transition: transform var(--transition-normal);
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile-image:hover {
-  transform: scale(1.05) rotate(5deg);
+  transform: scale(1.05);
 }
 
 .profile-image img {
