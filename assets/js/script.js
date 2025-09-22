@@ -155,9 +155,9 @@ function setupErrorHandling() {
 function init() {
   try {
     // Armazena em cache os elementos DOM
-    elements.animatable = document.querySelectorAll('.section, .skill-card, .timeline-item, .certification-card');
+    elements.animatable = document.querySelectorAll('.section, .skill-card, .timeline-item, .certification-card, .article-card');
     elements.contactLinks = document.querySelectorAll('.contact-link');
-    elements.cards = document.querySelectorAll('.skill-card, .timeline-item, .certification-card');
+    elements.cards = document.querySelectorAll('.skill-card, .timeline-item, .certification-card, .article-card');
     
     // Configura as funcionalidades
     setupContactLinks();
