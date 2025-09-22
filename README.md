@@ -44,9 +44,9 @@ O projeto está organizado da seguinte forma:
 - **CSS3**: Para a estilização e o design responsivo.
 - **JavaScript**: Para a interatividade e os efeitos visuais.
 
-## Como Visualizar
+## Visualização
 
-Para visualizar o currículo, basta abrir o arquivo `index.html` em qualquer navegador web moderno.
+Visualize a página neste link: https://oliveiralcn.github.io/curriculo/
 
 ## Licença
 
