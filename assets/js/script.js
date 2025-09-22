@@ -70,6 +70,37 @@ function setupKeyboardNavigation() {
   });
 }
 
+// ===== SUPORTE A MÚLTIPLOS IDIOMAS =====
+/**
+ * Alterna entre os estilos de idiomas
+ */
+function toggleLanguageStyles() {
+  const englishStyles = document.getElementById('english-styles');
+  const currentLang = document.documentElement.lang;
+  
+  if (currentLang === 'pt-BR') {
+    document.documentElement.lang = 'en';
+    englishStyles.disabled = false;
+  } else {
+    document.documentElement.lang = 'pt-BR';
+    englishStyles.disabled = true;
+  }
+}
+
+/**
+ * Adiciona botão de troca de idioma
+ */
+function addLanguageToggle() {
+  const header = document.querySelector('.header');
+  const toggleButton = document.createElement('button');
+  toggleButton.textContent = 'EN/PT';
+  toggleButton.setAttribute('aria-label', 'Alternar idioma');
+  toggleButton.classList.add('language-toggle');
+  toggleButton.addEventListener('click', toggleLanguageStyles);
+  
+  header.appendChild(toggleButton);
+}
+
 /**
  * Configura o gerenciamento de foco
  */
@@ -135,6 +166,7 @@ function init() {
     setupFocusManagement();
     setupReducedMotion();
     setupErrorHandling();
+    addLanguageToggle();
     
     // Adiciona a classe 'loaded' ao body para transições CSS
     document.body.classList.add('loaded');

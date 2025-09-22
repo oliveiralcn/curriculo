@@ -1,0 +1,29 @@
+/* Estilos para a versão em inglês do currículo */
+
+/* Seção de Habilidades */
+.skill-card-title {
+  font-size: var(--font-size-lg);
+}
+
+.skill-list li::before {
+  content: '▹';
+}
+
+/* Seção de Experiência Profissional e Formação Acadêmica */
+.timeline-title {
+  font-size: var(--font-size-xl);
+}
+
+.timeline-content li::before {
+  content: '-';
+}
+
+/* Seção de Certificações */
+.certification-title {
+  font-size: var(--font-size-lg);
+}
+
+/* Seção de Projetos */
+.project-title {
+  font-size: var(--font-size-lg);
+}
