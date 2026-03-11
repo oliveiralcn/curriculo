@@ -31,7 +31,7 @@
     <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Estilos -->
     <link rel="stylesheet" href="assets/css/styles.css?v=1.1">
@@ -53,7 +53,7 @@
                 </div>
                 <h1 class="main-title">Luan Carlos Nunes de Oliveira</h1>
                 <p class="subtitle">Desenvolvedor Python | Analista de Dados</p>
-                <div style="text-align: left; margin-top: var(--spacing-xl);">
+                <div>
                     <p>Desenvolvedor e Analista de Dados com mais de 2 anos de experiência, especializado em resolver problemas complexos com Python. Focado na automação de processos, análise de grandes volumes de dados e desenvolvimento de aplicações web (Node.js), transformo dados brutos em soluções de negócio eficientes e estratégicas.</p>
                 </div>
                 <nav class="contact-info" aria-label="Informações de contato">
@@ -100,63 +100,138 @@
                 <!-- Seção de Habilidades -->
                 <section class="section" aria-labelledby="habilidades">
                     <h2 id="habilidades" class="section-title">Habilidades</h2>
-                    <div class="skills-grid">
-                        <!-- Linguagens & Bancos de Dados -->
-                        <div class="skill-card">
-                            <h3 class="skill-card-title">Linguagens & Bancos de Dados</h3>
-                            <ul class="skill-list">
-                                <li><span class="skill-highlight">Python</span></li>
-                                <li><span class="skill-highlight">JavaScript</span></li>
-                                <li><span class="skill-highlight">TypeScript</span></li>
-                                <li><span class="skill-highlight">SQL</span></li>
-                            </ul>
-                        </div>
 
-                        <!-- Ecossistema Python -->
-                        <div class="skill-card">
-                            <h3 class="skill-card-title">Ecossistema Python</h3>
-                            <ul class="skill-list">
-                                <li><span class="skill-highlight">Pandas</span></li>
-                                <li><span class="skill-highlight">NumPy</span></li>
-                            </ul>
-                        </div>
+                    <!-- Navegação de Tabs -->
+                    <div class="skills-tabs" role="tablist" aria-label="Categorias de habilidades">
+                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-tecnologia" id="btn-tecnologia" data-tab="tecnologia">
+                            <span class="tab-icon">💻</span> Tecnologia
+                        </button>
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-saude" id="btn-saude" data-tab="saude">
+                            <span class="tab-icon">🏋️</span> Saúde &amp; Esporte
+                        </button>
+                    </div>
 
-                        <!-- Desenvolvimento Web & Backend -->
-                        <div class="skill-card">
-                            <h3 class="skill-card-title">Desenvolvimento Web & Backend</h3>
-                            <ul class="skill-list">
-                                <li><span class="skill-highlight">Node.js</span></li>
-                                <li>Criação de páginas web responsivas</li>
-                                <li>Deploy de aplicações web</li>
-                            </ul>
-                        </div>
+                    <!-- Tab: Tecnologia -->
+                    <div class="tab-panel active" id="tab-tecnologia" role="tabpanel" aria-labelledby="btn-tecnologia">
+                        <div class="skills-grid">
+                            <!-- Linguagens & Bancos de Dados -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Linguagens &amp; Bancos de Dados</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Python</span></li>
+                                    <li><span class="skill-highlight">JavaScript</span></li>
+                                    <li><span class="skill-highlight">TypeScript</span></li>
+                                    <li><span class="skill-highlight">SQL</span></li>
+                                </ul>
+                            </div>
 
-                        <!-- Análise de Dados & BI -->
-                        <div class="skill-card">
-                            <h3 class="skill-card-title">Análise de Dados & BI</h3>
-                            <ul class="skill-list">
-                                <li>Tratamento e interpretação de grandes volumes de dados</li>
-                                <li>Modelagem de dados</li>
-                                <li>Análise exploratória de dados (EDA)</li>
-                                <li><span class="skill-highlight">Power Query</span></li>
-                            </ul>
-                        </div>
+                            <!-- Ecossistema Python -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Ecossistema Python</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Pandas</span></li>
+                                    <li><span class="skill-highlight">NumPy</span></li>
+                                </ul>
+                            </div>
 
-                        <!-- Ferramentas & Plataformas -->
-                        <div class="skill-card">
-                            <h3 class="skill-card-title">Ferramentas & Plataformas</h3>
-                            <ul class="skill-list">
-                                <li><span class="skill-highlight">Jupyter Notebook</span></li>
-                                <li><span class="skill-highlight">Google Colab</span></li>
-                                <li><span class="skill-highlight">Notion</span></li>
-                                <li><span class="skill-highlight">Google Workspace</span></li>
-                                <li><span class="skill-highlight">Microsoft 365</span></li>
-                            </ul>
+                            <!-- Desenvolvimento Web & Backend -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Desenvolvimento Web &amp; Backend</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Node.js</span></li>
+                                    <li>Criação de páginas web responsivas</li>
+                                    <li>Deploy de aplicações web</li>
+                                </ul>
+                            </div>
+
+                            <!-- Análise de Dados & BI -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Análise de Dados &amp; BI</h3>
+                                <ul class="skill-list">
+                                    <li>Tratamento e interpretação de grandes volumes de dados</li>
+                                    <li>Modelagem de dados</li>
+                                    <li>Análise exploratória de dados (EDA)</li>
+                                    <li><span class="skill-highlight">Power Query</span></li>
+                                </ul>
+                            </div>
+
+                            <!-- Ferramentas & Plataformas -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Ferramentas &amp; Plataformas</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Jupyter Notebook</span></li>
+                                    <li><span class="skill-highlight">Google Colab</span></li>
+                                    <li><span class="skill-highlight">Notion</span></li>
+                                    <li><span class="skill-highlight">Google Workspace</span></li>
+                                    <li><span class="skill-highlight">Microsoft 365</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Saúde & Esporte -->
+                    <div class="tab-panel" id="tab-saude" role="tabpanel" aria-labelledby="btn-saude" hidden>
+                        <div class="skills-grid">
+                            <!-- Avaliação & Prescrição -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Avaliação &amp; Prescrição</h3>
+                                <ul class="skill-list">
+                                    <li>Prescrição de exercícios para populações especiais</li>
+                                    <li>Avaliação física e funcional</li>
+                                    <li>Prescrição para artrose, artrite e osteoporose</li>
+                                    <li>Análise da composição corporal</li>
+                                </ul>
+                            </div>
+
+                            <!-- Treinamento -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Treinamento</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Musculação</span></li>
+                                    <li><span class="skill-highlight">Treinamento Funcional</span></li>
+                                    <li>Elaboração de planilhas de treino</li>
+                                    <li>Periodização do treinamento</li>
+                                </ul>
+                            </div>
+
+                            <!-- Pesquisa & Ciência -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Pesquisa &amp; Ciência</h3>
+                                <ul class="skill-list">
+                                    <li>Metodologia científica</li>
+                                    <li>Análise de dados hemodinâmicos</li>
+                                    <li>Pesquisa com idosos hipertensos</li>
+                                    <li>Produção e apresentação de artigos</li>
+                                </ul>
+                            </div>
+
+                            <!-- Gestão & Pessoas -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Gestão &amp; Pessoas</h3>
+                                <ul class="skill-list">
+                                    <li>Gestão de alunos e clientes</li>
+                                    <li>Trabalho em equipe</li>
+                                    <li>Pensamento rápido sob pressão</li>
+                                    <li>Capacidade de gestão de pessoas</li>
+                                </ul>
+                            </div>
+
+                            <!-- Áreas de Atuação -->
+                            <div class="skill-card">
+                                <h3 class="skill-card-title">Áreas de Atuação</h3>
+                                <ul class="skill-list">
+                                    <li><span class="skill-highlight">Educação Física</span></li>
+                                    <li>Atividade física para saúde</li>
+                                    <li>Escalada esportiva</li>
+                                    <li>Jiu-Jitsu</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </section>
 
                 <!-- Seção de Experiência Profissional -->
+
                 <section class="section" aria-labelledby="experiencia">
                     <h2 id="experiencia" class="section-title">Experiência Profissional</h2>
                     <div class="timeline">

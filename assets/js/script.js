@@ -148,6 +148,50 @@ function setupErrorHandling() {
   });
 }
 
+// ===== SISTEMA DE TABS DE HABILIDADES =====
+/**
+ * Configura a navegação por abas na seção de Habilidades
+ */
+function setupSkillsTabs() {
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  if (!tabButtons.length) return;
+
+  function activateTab(btn) {
+    const targetId = 'tab-' + btn.dataset.tab;
+
+    // Desativa todas as tabs e esconde todos os painéis
+    tabButtons.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+      panel.hidden = true;
+    });
+
+    // Ativa a tab clicada e exibe o painel correspondente
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    const panel = document.getElementById(targetId);
+    if (panel) panel.hidden = false;
+  }
+
+  tabButtons.forEach((btn, index) => {
+    btn.addEventListener('click', () => activateTab(btn));
+
+    // Navegação por teclado (setas)
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const nextIndex = e.key === 'ArrowRight'
+          ? (index + 1) % tabButtons.length
+          : (index - 1 + tabButtons.length) % tabButtons.length;
+        tabButtons[nextIndex].focus();
+        activateTab(tabButtons[nextIndex]);
+      }
+    });
+  });
+}
+
 // ===== INICIALIZAÇÃO =====
 /**
  * Inicializa todas as funcionalidades quando o DOM está pronto
@@ -167,6 +211,8 @@ function init() {
     setupReducedMotion();
     setupErrorHandling();
     addLanguageToggle();
+    setupSkillsTabs();
+
     
     // Adiciona a classe 'loaded' ao body para transições CSS
     document.body.classList.add('loaded');
