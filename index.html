@@ -97,24 +97,27 @@
             <!-- Conteúdo Principal -->
             <main id="main-content" class="content" tabindex="-1">
 
-                <!-- Seção de Habilidades -->
-                <section class="section" aria-labelledby="habilidades">
-                    <h2 id="habilidades" class="section-title">Habilidades</h2>
+                <!-- Navegação Global de Abas -->
+                <div class="main-tabs" role="tablist" aria-label="Áreas de atuação">
+                    <button class="main-tab-btn active" role="tab" aria-selected="true"
+                        aria-controls="main-tab-tecnologia" id="main-btn-tecnologia" data-tab="tecnologia">
+                        <span class="tab-icon">💻</span> Tecnologia
+                    </button>
+                    <button class="main-tab-btn" role="tab" aria-selected="false"
+                        aria-controls="main-tab-saude" id="main-btn-saude" data-tab="saude">
+                        <span class="tab-icon">🏋️</span> Saúde &amp; Esporte
+                    </button>
+                </div>
 
-                    <!-- Navegação de Tabs -->
-                    <div class="skills-tabs" role="tablist" aria-label="Categorias de habilidades">
-                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-tecnologia" id="btn-tecnologia" data-tab="tecnologia">
-                            <span class="tab-icon">💻</span> Tecnologia
-                        </button>
-                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-saude" id="btn-saude" data-tab="saude">
-                            <span class="tab-icon">🏋️</span> Saúde &amp; Esporte
-                        </button>
-                    </div>
+                <!-- ============================================================ -->
+                <!-- ABA: TECNOLOGIA                                               -->
+                <!-- ============================================================ -->
+                <div class="main-tab-panel" id="main-tab-tecnologia" role="tabpanel" aria-labelledby="main-btn-tecnologia">
 
-                    <!-- Tab: Tecnologia -->
-                    <div class="tab-panel active" id="tab-tecnologia" role="tabpanel" aria-labelledby="btn-tecnologia">
+                    <!-- Habilidades - Tecnologia -->
+                    <section class="section" aria-labelledby="habilidades-tec">
+                        <h2 id="habilidades-tec" class="section-title">Habilidades</h2>
                         <div class="skills-grid">
-                            <!-- Linguagens & Bancos de Dados -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Linguagens &amp; Bancos de Dados</h3>
                                 <ul class="skill-list">
@@ -124,8 +127,6 @@
                                     <li><span class="skill-highlight">SQL</span></li>
                                 </ul>
                             </div>
-
-                            <!-- Ecossistema Python -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Ecossistema Python</h3>
                                 <ul class="skill-list">
@@ -133,8 +134,6 @@
                                     <li><span class="skill-highlight">NumPy</span></li>
                                 </ul>
                             </div>
-
-                            <!-- Desenvolvimento Web & Backend -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Desenvolvimento Web &amp; Backend</h3>
                                 <ul class="skill-list">
@@ -143,8 +142,6 @@
                                     <li>Deploy de aplicações web</li>
                                 </ul>
                             </div>
-
-                            <!-- Análise de Dados & BI -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Análise de Dados &amp; BI</h3>
                                 <ul class="skill-list">
@@ -154,8 +151,6 @@
                                     <li><span class="skill-highlight">Power Query</span></li>
                                 </ul>
                             </div>
-
-                            <!-- Ferramentas & Plataformas -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Ferramentas &amp; Plataformas</h3>
                                 <ul class="skill-list">
@@ -167,12 +162,178 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <!-- Tab: Saúde & Esporte -->
-                    <div class="tab-panel" id="tab-saude" role="tabpanel" aria-labelledby="btn-saude" hidden>
+                    <!-- Experiência Profissional - Tecnologia -->
+                    <section class="section" aria-labelledby="experiencia-tec">
+                        <h2 id="experiencia-tec" class="section-title">Experiência Profissional</h2>
+                        <div class="timeline">
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Analista de Dados | Secretaria Municipal de Educação | JANEIRO 2022 - ATUALMENTE</h3>
+                                <ul class="timeline-content">
+                                    <li>Automatizei a coleta e o processamento de dados governamentais com scripts em Python, **reduzindo em 80% o tempo** para a geração de relatórios e eliminando perdas de prazo.</li>
+                                    <li>Desenvolvi e implementei **aplicações de formulário com Node.js** para a coleta de dados educacionais, centralizando a informação e permitindo análises mais rápidas e precisas.</li>
+                                    <li>Criei **páginas web interativas** para a realização de sorteios e eventos da secretaria, melhorando a transparência e o engajamento dos participantes.</li>
+                                    <li>Desenvolvi soluções de logística que **otimizaram a distribuição de recursos** entre as unidades educacionais.</li>
+                                </ul>
+                            </article>
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Técnico em Montagem e Manutenção de Computadores e Redes | E E E F M Gertrudes Leite | JULHO 2012 - JUNHO 2014</h3>
+                                <ul class="timeline-content">
+                                    <li>Trabalho em equipe.</li>
+                                    <li>Gestão de recursos.</li>
+                                    <li>Manutenção de computadores.</li>
+                                    <li>Gestão de rede de computadores.</li>
+                                    <li>Manutenção de rede de computadores.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Formação - Tecnologia -->
+                    <section class="section" aria-labelledby="formacao-tec">
+                        <h2 id="formacao-tec" class="section-title">Formação</h2>
+                        <div class="timeline">
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Formação Acadêmica - Área de Tecnologia</h3>
+                                <ul class="timeline-content">
+                                    <li><strong>Desenvolvimento de Sistemas</strong> | UNICORP | Cursando</li>
+                                </ul>
+                            </article>
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Cursos e Certificações - Tecnologia</h3>
+                                <div class="certifications-grid">
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Aulão de análise de dados</h4>
+                                        <p class="certification-institution">Hashtag Treinamentos</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Aulão de ciência de dados</h4>
+                                        <p class="certification-institution">Hashtag Treinamentos</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Fundamentos do ChatGPT</h4>
+                                        <p class="certification-institution">Santander Open Academy</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Introdução à ciência de dados</h4>
+                                        <p class="certification-institution">Santander Open Academy</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Excel</h4>
+                                        <p class="certification-institution">Santander Open Academy</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Montagem e Manutenção de Computadores e Redes</h4>
+                                        <p class="certification-institution">Microlins</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Redes Avançadas</h4>
+                                        <p class="certification-institution">Microlins</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Segurança em Redes</h4>
+                                        <p class="certification-institution">Microlins</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Informática Básica</h4>
+                                        <p class="certification-institution">Microlins</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Excel Avançado</h4>
+                                        <p class="certification-institution">Microlins</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Domine a IA com prompting responsável</h4>
+                                        <p class="certification-institution">Santander Open Academy</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Gestão Financeira.</h4>
+                                        <p class="certification-institution">Sebrae</p>
+                                    </article>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Projetos -->
+                    <section class="section" aria-labelledby="projetos">
+                        <h2 id="projetos" class="section-title">Projetos</h2>
+                        <div class="projects-grid">
+                            <article class="project-card">
+                                <h3 class="project-title">Sistema de Automações Escolares</h3>
+                                <p class="project-description">Sistema complexo de automações capaz de raspar e tratar dados do sistema de gestão escolar do governo 'Saber'. O projeto automatiza processos manuais repetitivos, reduzindo significativamente o tempo gasto em tarefas administrativas.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Selenium</span>
+                                    <span class="tech-tag">PyAutoGUI</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">SQL</span>
+                                    <span class="tech-tag">Jupyter</span>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Formulários de Cadastro Integrados</h3>
+                                <p class="project-description">Formulários de cadastros com integração ao Google Sheets, criados para coletar informações de modo consistente e usando verificadores de informações, para gerar bases de dados sólidas e consistentes para análises posteriores.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Google Sheets API</span>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Cardápio Digital para Lanchonete</h3>
+                                <p class="project-description">Sistema completo de cardápio digital com gestão de produtos, pedidos, mesas e funcionários. Inclui página de rastreamento para clientes e geração de QR codes personalizados para uso interno.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">Firebase</span>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Sistema de Gestão Escolar</h3>
+                                <p class="project-description">Aplicação web desenvolvida com Node.js para gerenciamento de dados escolares, incluindo cadastro de alunos, professores e turmas.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">SQL</span>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Análise de Dados Educacionais</h3>
+                                <p class="project-description">Projeto de análise de grandes volumes de dados educacionais utilizando Python, Pandas e NumPy para identificar padrões de desempenho.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Pandas</span>
+                                    <span class="tech-tag">NumPy</span>
+                                </div>
+                            </article>
+                            <article class="project-card">
+                                <h3 class="project-title">Página de Sorteios Interativa</h3>
+                                <p class="project-description">Página web interativa para realização de sorteios e eventos da secretaria, melhorando a transparência e o engajamento.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                </div><!-- /main-tab-tecnologia -->
+
+                <!-- ============================================================ -->
+                <!-- ABA: SAÚDE & ESPORTE                                          -->
+                <!-- ============================================================ -->
+                <div class="main-tab-panel" id="main-tab-saude" role="tabpanel" aria-labelledby="main-btn-saude" hidden>
+
+                    <!-- Habilidades - Saúde -->
+                    <section class="section" aria-labelledby="habilidades-saude">
+                        <h2 id="habilidades-saude" class="section-title">Habilidades</h2>
                         <div class="skills-grid">
-                            <!-- Avaliação & Prescrição -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Avaliação &amp; Prescrição</h3>
                                 <ul class="skill-list">
@@ -182,8 +343,6 @@
                                     <li>Análise da composição corporal</li>
                                 </ul>
                             </div>
-
-                            <!-- Treinamento -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Treinamento</h3>
                                 <ul class="skill-list">
@@ -193,8 +352,6 @@
                                     <li>Periodização do treinamento</li>
                                 </ul>
                             </div>
-
-                            <!-- Pesquisa & Ciência -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Pesquisa &amp; Ciência</h3>
                                 <ul class="skill-list">
@@ -204,8 +361,6 @@
                                     <li>Produção e apresentação de artigos</li>
                                 </ul>
                             </div>
-
-                            <!-- Gestão & Pessoas -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Gestão &amp; Pessoas</h3>
                                 <ul class="skill-list">
@@ -215,8 +370,6 @@
                                     <li>Capacidade de gestão de pessoas</li>
                                 </ul>
                             </div>
-
-                            <!-- Áreas de Atuação -->
                             <div class="skill-card">
                                 <h3 class="skill-card-title">Áreas de Atuação</h3>
                                 <ul class="skill-list">
@@ -227,309 +380,115 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-                <!-- Seção de Experiência Profissional -->
+                    <!-- Experiência Profissional - Saúde -->
+                    <section class="section" aria-labelledby="experiencia-saude">
+                        <h2 id="experiencia-saude" class="section-title">Experiência Profissional</h2>
+                        <div class="timeline">
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Instrutor de Musculação | RM Arena Fitness - Desterro | SETEMBRO 2021 - NOVEMBRO 2023</h3>
+                                <ul class="timeline-content">
+                                    <li>Trabalho em equipe.</li>
+                                    <li>Capacidade de gestão de pessoas.</li>
+                                    <li>Pensamento rápido.</li>
+                                    <li>Criação de automação para envio dos treinos de forma rápida e eficaz.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
 
-                <section class="section" aria-labelledby="experiencia">
-                    <h2 id="experiencia" class="section-title">Experiência Profissional</h2>
-                    <div class="timeline">
-                        <!-- Trabalho Atual -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Analista de Dados | Secretaria Municipal de Educação | JANEIRO 2022 - ATUALMENTE</h3>
-                            <ul class="timeline-content">
-                                <li>Automatizei a coleta e o processamento de dados governamentais com scripts em Python, **reduzindo em 80% o tempo** para a geração de relatórios e eliminando perdas de prazo.</li>
-                                <li>Desenvolvi e implementei **aplicações de formulário com Node.js** para a coleta de dados educacionais, centralizando a informação e permitindo análises mais rápidas e precisas.</li>
-                                <li>Criei **páginas web interativas** para a realização de sorteios e eventos da secretaria, melhorando a transparência e o engajamento dos participantes.</li>
-                                <li>Desenvolvi soluções de logística que **otimizaram a distribuição de recursos** entre as unidades educacionais.</li>
-                            </ul>
-                        </article>
-
-                        <!-- Trabalhos Anteriores -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Instrutor de Musculação | RM Arena Fitness - Desterro | SETEMBRO 2021 - NOVEMBRO 2023</h3>
-                            <ul class="timeline-content">
-                                <li>Trabalho em equipe.</li>
-                                <li>Capacidade de gestão de pessoas.</li>
-                                <li>Pensamento rápido.</li>
-                                <li>Criação de automação para envio dos treinos de forma rápida e eficaz.</li>
-                            </ul>
-                        </article>
-
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Técnico em Montagem e Manutenção de Computadores e Redes | E E E F M Gertrudes Leite | JULHO 2012 - JUNHO 2014</h3>
-                            <ul class="timeline-content">
-                                <li>Trabalho em equipe.</li>
-                                <li>Gestão de recursos.</li>
-                                <li>Manutenção de computadores.</li>
-                                <li>Gestão de rede de computadores.</li>
-                                <li>Manutenção de rede de computadores.</li>
-                            </ul>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- Seção de Formação -->
-                <section class="section" aria-labelledby="formacao">
-                    <h2 id="formacao" class="section-title">Formação</h2>
-                    <div class="timeline">
-                        <!-- Formação em Tecnologia -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Formação Acadêmica - Área de Tecnologia</h3>
-                            <ul class="timeline-content">
-                                <li><strong>Desenvolvimento de Sistemas</strong> | UNICORP | Cursando</li>
-                            </ul>
-                        </article>
-
-                        <!-- Formação em Educação Física -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Formação Acadêmica - Área de Educação Física</h3>
-                            <ul class="timeline-content">
-                                <li><strong>Pós-graduação em Prescrição de Atividade Físicas em Situações Especiais de Saúde e Lesões</strong> | Unyleya</li>
-                                <li><strong>Bacharel em Educação Física</strong> | Centro Universitário de João Pessoa-UNIPÊ | 25 de Janeiro de 2018</li>
-                            </ul>
-                        </article>
-                        
-                        <!-- Cursos e Certificações -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Cursos e Certificações - Tecnologia</h3>
-                            <div class="certifications-grid">
-                                <!-- Análise de Dados -->
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Aulão de análise de dados</h4>
-                                    <p class="certification-institution">Hashtag Treinamentos</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Aulão de ciência de dados</h4>
-                                    <p class="certification-institution">Hashtag Treinamentos</p>
-                                </article>
-
-                                <!-- IA e Tecnologia -->
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Fundamentos do ChatGPT</h4>
-                                    <p class="certification-institution">Santander Open Academy</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Introdução à ciência de dados</h4>
-                                    <p class="certification-institution">Santander Open Academy</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Excel</h4>
-                                    <p class="certification-institution">Santander Open Academy</p>
-                                </article>
-
-                                <!-- Certificações Técnicas -->
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Montagem e Manutenção de Computadores e Redes</h4>
-                                    <p class="certification-institution">Microlins</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Redes Avançadas</h4>
-                                    <p class="certification-institution">Microlins</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Segurança em Redes</h4>
-                                    <p class="certification-institution">Microlins</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Informática Básica</h4>
-                                    <p class="certification-institution">Microlins</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Excel Avançado</h4>
-                                    <p class="certification-institution">Microlins</p>
-                                </article>              
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Domine a IA com prompting responsável</h4>
-                                    <p class="certification-institution">Santander Open Academy</p>
-                                </article>
-                            </div>
-                        </article>
-                        
-                        <!-- Cursos e Certificações - Saúde -->
-                        <article class="timeline-item">
-                            <h3 class="timeline-title">Cursos e Certificações - Saúde</h3>
-                            <div class="certifications-grid">
-                                <!-- Adicione aqui os cursos e certificações da área de saúde -->
-                                <article class="certification-card">
-                                    <h4 class="certification-title">fisiologia, avaliação e prescrição de exercícios para artrose, artrite e osteoporose, com aplicações práticas.</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Alimentação, Nutrição e Exercício Físico.</h4>
-                                    <p class="certification-institution">ENAFES</p>
-                                </article>   
-                                
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Projeto de extensão de escalada esportiva.</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Projeto de extensão de Jiu-Jitsu.</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Treinamento Funcional.</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>                                
-                                
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Musculação .</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>
-
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Projeto de Pesquisa "Influência de um programa de treinamento funcional nas respostas hemodinâmicas, na qualidade do sono, na composição corporal e capacidades funcionais de idosos hipertensos.</h4>
-                                    <p class="certification-institution">Unipê</p>
-                                </article>
-                            </div>
-                        </article>
-                    </div>
-                </section>                        
-                <article class="timeline-item">
-                            <h3 class="timeline-title">Outros Cursos e Certificações</h3>
-                            <div class="certifications-grid">
-                                <!-- Adicione aqui os cursos e certificações da área de saúde -->
-                                <article class="certification-card">
-                                    <h4 class="certification-title">Gestão Financeira.</h4>
-                                    <p class="certification-institution">Sebrae</p>
-                                </article>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- Seção de Projetos -->
-                <section class="section" aria-labelledby="projetos">
-                    <h2 id="projetos" class="section-title">Projetos</h2>
-                    <div class="projects-grid">
-                        <!-- Projeto 1 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Sistema de Automações Escolares</h3>
-                            <p class="project-description">Sistema complexo de automações capaz de raspar e tratar dados do sistema de gestão escolar do governo 'Saber'. O projeto automatiza processos manuais repetitivos, reduzindo significativamente o tempo gasto em tarefas administrativas.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Selenium</span>
-                                <span class="tech-tag">PyAutoGUI</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">SQL</span>
-                                <span class="tech-tag">Jupyter</span>
-                            </div>
-                        </article>
-
-                        <!-- Projeto 2 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Formulários de Cadastro Integrados</h3>
-                            <p class="project-description">Formulários de cadastros com integração ao Google Sheets, criados para coletar informações de modo consistente e usando verificadores de informações, para gerar bases de dados sólidas e consistentes para análises posteriores.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Google Sheets API</span>
-                            </div>
-                        </article>
-
-                        <!-- Projeto 3 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Cardápio Digital para Lanchonete</h3>
-                            <p class="project-description">Sistema completo de cardápio digital com gestão de produtos, pedidos, mesas e funcionários. Inclui página de rastreamento para clientes e geração de QR codes personalizados para uso interno.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">Firebase</span>
-                            </div>
-                        </article>
-
-                        <!-- Projeto 4 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Sistema de Gestão Escolar</h3>
-                            <p class="project-description">Aplicação web desenvolvida com Node.js para gerenciamento de dados escolares, incluindo cadastro de alunos, professores e turmas.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">SQL</span>
-                            </div>
-                        </article>
-
-                        <!-- Projeto 5 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Análise de Dados Educacionais</h3>
-                            <p class="project-description">Projeto de análise de grandes volumes de dados educacionais utilizando Python, Pandas e NumPy para identificar padrões de desempenho.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Pandas</span>
-                                <span class="tech-tag">NumPy</span>
-                            </div>
-                        </article>
-
-                        <!-- Projeto 6 -->
-                        <article class="project-card">
-                            <h3 class="project-title">Página de Sorteios Interativa</h3>
-                            <p class="project-description">Página web interativa para realização de sorteios e eventos da secretaria, melhorando a transparência e o engajamento.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- Seção de Artigos -->
-                <section class="section" aria-labelledby="artigos">
-                    <h2 id="artigos" class="section-title">Artigos</h2>
-                    <div class="articles-grid">
-                        <!-- Exemplo de Artigo 1 -->
-                        <article class="article-card">
-                            <h3 class="article-title">EFEITO DE UMA SESSÃO DE TREINAMENTO MULTIFUNCIONAL NA HIPOTENSÃO PÓS EXERCÍCIO DE IDOSOS</h3>
-                            <p class="article-description">Apresentado na modalidade Pôster no XXV Congresso da Sociedade Brasileira de Hipertensão.</p>
-                            <div class="article-meta">
-                                <span class="article-date">Caxias do Sul/RS, de 09 a 12 de agosto de 2017</span>
-                                <div class="article-tags">
-                                    <span class="tech-tag">Treinamento Funcional</span>
-                                    <span class="tech-tag">Hipertensão</span>
-                                    <span class="tech-tag">Idosos</span>
-                                    <span class="tech-tag">Envelhecimento</span>
-                                    <span class="tech-tag">Exercício Físico</span>
-                                    <span class="tech-tag">Educação Física</span>
+                    <!-- Formação - Saúde -->
+                    <section class="section" aria-labelledby="formacao-saude">
+                        <h2 id="formacao-saude" class="section-title">Formação</h2>
+                        <div class="timeline">
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Formação Acadêmica - Área de Educação Física</h3>
+                                <ul class="timeline-content">
+                                    <li><strong>Pós-graduação em Prescrição de Atividade Físicas em Situações Especiais de Saúde e Lesões</strong> | Unyleya</li>
+                                    <li><strong>Bacharel em Educação Física</strong> | Centro Universitário de João Pessoa-UNIPÊ | 25 de Janeiro de 2018</li>
+                                </ul>
+                            </article>
+                            <article class="timeline-item">
+                                <h3 class="timeline-title">Cursos e Certificações - Saúde</h3>
+                                <div class="certifications-grid">
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Fisiologia, avaliação e prescrição de exercícios para artrose, artrite e osteoporose, com aplicações práticas.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Alimentação, Nutrição e Exercício Físico.</h4>
+                                        <p class="certification-institution">ENAFES</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Projeto de extensão de escalada esportiva.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Projeto de extensão de Jiu-Jitsu.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Treinamento Funcional.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Musculação.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
+                                    <article class="certification-card">
+                                        <h4 class="certification-title">Projeto de Pesquisa "Influência de um programa de treinamento funcional nas respostas hemodinâmicas, na qualidade do sono, na composição corporal e capacidades funcionais de idosos hipertensos.</h4>
+                                        <p class="certification-institution">Unipê</p>
+                                    </article>
                                 </div>
-                            </div>
-                        </article>                        <article class="article-card">
-                            <h3 class="article-title">Efeito de um programa de treinamento funcional na melhoria das capacidades funcionais de idosos.</h3>
-                            <p class="article-description">O estudo detalha os resultados de um programa de treinamento funcional de quatro semanas com idosos. A pesquisa concluiu que o programa foi eficaz para melhorar a capacidade funcional deles em atividades diárias.</p>
-                            <div class="article-meta">
-                                <span class="article-date">2019</span>
-                                <div class="article-tags">
-                                    <span class="tech-tag">Treinamento Funcional</span>
-                                    <span class="tech-tag">Capacidade Funcional</span>
-                                    <span class="tech-tag">Idosos</span>
-                                    <span class="tech-tag">Envelhecimento</span>
-                                    <span class="tech-tag">Exercício Físico</span>
-                                    <span class="tech-tag">Educação Física</span>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- Artigos -->
+                    <section class="section" aria-labelledby="artigos">
+                        <h2 id="artigos" class="section-title">Artigos</h2>
+                        <div class="articles-grid">
+                            <article class="article-card">
+                                <h3 class="article-title">EFEITO DE UMA SESSÃO DE TREINAMENTO MULTIFUNCIONAL NA HIPOTENSÃO PÓS EXERCÍCIO DE IDOSOS</h3>
+                                <p class="article-description">Apresentado na modalidade Pôster no XXV Congresso da Sociedade Brasileira de Hipertensão.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">Caxias do Sul/RS, de 09 a 12 de agosto de 2017</span>
+                                    <div class="article-tags">
+                                        <span class="tech-tag">Treinamento Funcional</span>
+                                        <span class="tech-tag">Hipertensão</span>
+                                        <span class="tech-tag">Idosos</span>
+                                        <span class="tech-tag">Envelhecimento</span>
+                                        <span class="tech-tag">Exercício Físico</span>
+                                        <span class="tech-tag">Educação Física</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <a href="https://www.rbpfex.com.br/index.php/rbpfex/article/view/2241" class="article-link" target="_blank" rel="noopener noreferrer">Ler Artigo</a>
-                        </article>
-                    </div>
-                </section>
+                            </article>
+                            <article class="article-card">
+                                <h3 class="article-title">Efeito de um programa de treinamento funcional na melhoria das capacidades funcionais de idosos.</h3>
+                                <p class="article-description">O estudo detalha os resultados de um programa de treinamento funcional de quatro semanas com idosos. A pesquisa concluiu que o programa foi eficaz para melhorar a capacidade funcional deles em atividades diárias.</p>
+                                <div class="article-meta">
+                                    <span class="article-date">2019</span>
+                                    <div class="article-tags">
+                                        <span class="tech-tag">Treinamento Funcional</span>
+                                        <span class="tech-tag">Capacidade Funcional</span>
+                                        <span class="tech-tag">Idosos</span>
+                                        <span class="tech-tag">Envelhecimento</span>
+                                        <span class="tech-tag">Exercício Físico</span>
+                                        <span class="tech-tag">Educação Física</span>
+                                    </div>
+                                </div>
+                                <a href="https://www.rbpfex.com.br/index.php/rbpfex/article/view/2241" class="article-link" target="_blank" rel="noopener noreferrer">Ler Artigo</a>
+                            </article>
+                        </div>
+                    </section>
+
+                </div><!-- /main-tab-saude -->
+
             </main>
+
         </div>
     </div>
-
     <!-- Scripts -->
     <script src="assets/js/script.js?v=1.1" defer></script>
 </body>

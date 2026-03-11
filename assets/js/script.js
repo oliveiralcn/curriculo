@@ -148,23 +148,23 @@ function setupErrorHandling() {
   });
 }
 
-// ===== SISTEMA DE TABS DE HABILIDADES =====
+// ===== SISTEMA DE ABAS PRINCIPAIS =====
 /**
- * Configura a navegação por abas na seção de Habilidades
+ * Configura a navegação pelas abas globais (Tecnologia / Saúde & Esporte)
  */
 function setupSkillsTabs() {
-  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabButtons = document.querySelectorAll('.main-tab-btn');
   if (!tabButtons.length) return;
 
   function activateTab(btn) {
-    const targetId = 'tab-' + btn.dataset.tab;
+    const targetId = 'main-tab-' + btn.dataset.tab;
 
     // Desativa todas as tabs e esconde todos os painéis
     tabButtons.forEach(b => {
       b.classList.remove('active');
       b.setAttribute('aria-selected', 'false');
     });
-    document.querySelectorAll('.tab-panel').forEach(panel => {
+    document.querySelectorAll('.main-tab-panel').forEach(panel => {
       panel.hidden = true;
     });
 
@@ -178,7 +178,7 @@ function setupSkillsTabs() {
   tabButtons.forEach((btn, index) => {
     btn.addEventListener('click', () => activateTab(btn));
 
-    // Navegação por teclado (setas)
+    // Navegação por teclado (setas ← →)
     btn.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
         e.preventDefault();
@@ -191,6 +191,7 @@ function setupSkillsTabs() {
     });
   });
 }
+
 
 // ===== INICIALIZAÇÃO =====
 /**
